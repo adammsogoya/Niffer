@@ -20,7 +20,7 @@
             background: rgba(5, 5, 7, 0.85);
             backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
             z-index: 1000; border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 16px 24px; display: flex; justify-space: space-between; align-items: center;
+            padding: 16px 24px; display: flex; justify-content: space-between; align-items: center;
         }
         .logo { font-size: 1.1rem; font-weight: 700; color: #ffffff; letter-spacing: -0.02em; }
         .nav-links a { color: #86868b; text-decoration: none; margin-left: 18px; font-size: 0.82rem; transition: color 0.3s; }
@@ -35,6 +35,11 @@
             width: 100%; max-width: 260px; height: auto; border-radius: 16px;
             background-color: #121218; border: 3px solid #c084fc; margin-bottom: 20px;
             box-shadow: 0 0 25px rgba(192, 132, 252, 0.3); display: inline-block;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+        .hero-img:hover {
+            transform: scale(1.03) translateY(-4px);
+            box-shadow: 0 0 35px rgba(192, 132, 252, 0.5);
         }
         .hero-tag {
             display: inline-block; font-size: 0.8rem; text-transform: uppercase;
@@ -64,12 +69,13 @@
             width: 12px; height: 12px; border-radius: 50%; background-color: #c084fc;
             box-shadow: 0 0 10px #c084fc;
         }
-        .timeline-card { background: #0d0d12; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 18px; padding: 24px; }
+        .timeline-card { background: #0d0d12; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 18px; padding: 24px; transition: border-color 0.3s; }
+        .timeline-card:hover { border-color: rgba(192, 132, 252, 0.3); }
         .timeline-year { font-size: 0.8rem; color: #c084fc; font-weight: 600; margin-bottom: 6px; }
         .timeline-title { font-size: 1.2rem; font-weight: 600; color: #ffffff; margin-bottom: 8px; }
         .timeline-text { color: #a1a1a6; font-size: 0.92rem; }
 
-        /* Gallery Grid - Natural Full Display */
+        /* Gallery Grid - Animated & Interactive */
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 16px; align-items: start; }
         .gallery-img { 
             width: 100%; 
@@ -79,13 +85,25 @@
             border-radius: 12px; 
             border: 1px solid rgba(255, 255, 255, 0.1); 
             display: block;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+        }
+        .gallery-img:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(192, 132, 252, 0.2);
+            border-color: rgba(192, 132, 252, 0.5);
         }
 
-        /* Products Grid - Natural Full Display */
+        /* Products Grid - Animated Cards */
         .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; align-items: start; }
         .product-card {
             background: #0d0d12; border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 16px; padding: 16px; text-align: center;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(192, 132, 252, 0.4);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
         }
         .product-card img { 
             width: 100%; 
@@ -95,6 +113,10 @@
             border-radius: 12px; 
             margin-bottom: 12px; 
             display: block;
+            transition: transform 0.4s ease;
+        }
+        .product-card:hover img {
+            transform: scale(1.04);
         }
         .product-card h4 { font-size: 1rem; color: #ffffff; margin-bottom: 4px; }
 
@@ -103,20 +125,24 @@
         .feature-card {
             background: linear-gradient(180deg, #121218 0%, #0d0d12 100%);
             border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; padding: 28px 20px;
+            transition: transform 0.3s ease;
         }
+        .feature-card:hover { transform: translateY(-4px); border-color: rgba(255, 255, 255, 0.2); }
         .feature-card h3 { font-size: 1.25rem; color: #ffffff; margin-bottom: 10px; }
         .feature-card p { color: #a1a1a6; font-size: 0.9rem; margin-bottom: 16px; }
 
         /* Video Grid */
         .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .video-box { background: #0d0d12; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 16px; text-align: center; }
+        .video-box { background: #0d0d12; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 16px; text-align: center; transition: border-color 0.3s; }
+        .video-box:hover { border-color: rgba(192, 132, 252, 0.3); }
         .video-box video { width: 100%; height: auto; border-radius: 12px; background-color: #000; }
         .video-box p { color: #a1a1a6; font-size: 0.88rem; margin-top: 10px; }
 
         /* Fan Hub & Footer */
         .fan-hub { background: linear-gradient(135deg, #1e1b4b 0%, #0d0d12 100%); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 24px; padding: 40px; text-align: center; }
         .action-pills { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 20px; }
-        .pill-btn { display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: #ffffff; padding: 10px 24px; border-radius: 980px; text-decoration: none; font-size: 0.9rem; }
+        .pill-btn { display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: #ffffff; padding: 10px 24px; border-radius: 980px; text-decoration: none; font-size: 0.9rem; transition: all 0.3s; }
+        .pill-btn:hover { background: #c084fc; border-color: #c084fc; color: #000000; transform: scale(1.05); }
         footer { text-align: center; padding: 40px 20px; border-top: 1px solid rgba(255, 255, 255, 0.08); color: #86868b; font-size: 0.85rem; }
     </style>
 </head>
@@ -127,7 +153,6 @@
         <div class="nav-links">
             <a href="#journey">Journey</a>
             <a href="#products">Products</a>
-            <a href="#social">Social</a>
             <a href="#ambassador">Ambassador</a>
             <a href="#speeches">Speeches & Videos</a>
         </div>
@@ -205,24 +230,6 @@
                 <div class="product-card"><img src="P6.jpg" alt="Niffer Product 6"><h4>Niffer Product 6</h4></div>
                 <div class="product-card"><img src="P7.jpg" alt="Niffer Product 7"><h4>Niffer Product 7</h4></div>
                 <div class="product-card"><img src="P8.jpg" alt="Niffer Product 8"><h4>Niffer Product 8</h4></div>
-            </div>
-        </section>
-
-        <!-- Social Media Presence Section (7 Pictures) -->
-        <section id="social" style="margin-top: 60px;">
-            <div class="section-header">
-                <h2>Social Media & Community Engagement</h2>
-                <p>Highlights of digital reach, community interaction, and fan culture.</p>
-            </div>
-
-            <div class="gallery-grid">
-                <img src="SLP1.jpg" alt="Social Media Presence 1" class="gallery-img">
-                <img src="SLP2.jpg" alt="Social Media Presence 2" class="gallery-img">
-                <img src="SLP3.jpg" alt="Social Media Presence 3" class="gallery-img">
-                <img src="SLP4.jpg" alt="Social Media Presence 4" class="gallery-img">
-                <img src="SLP5.jpg" alt="Social Media Presence 5" class="gallery-img">
-                <img src="SLP6.jpg" alt="Social Media Presence 6" class="gallery-img">
-                <img src="SLP7.jpg" alt="Social Media Presence 7" class="gallery-img">
             </div>
         </section>
 
