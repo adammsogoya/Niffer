@@ -20,7 +20,7 @@
             background: rgba(5, 5, 7, 0.85);
             backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
             z-index: 1000; border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 16px 24px; display: flex; justify-content: space-between; align-items: center;
+            padding: 16px 24px; display: flex; justify-space: space-between; align-items: center;
         }
         .logo { font-size: 1.1rem; font-weight: 700; color: #ffffff; letter-spacing: -0.02em; }
         .nav-links a { color: #86868b; text-decoration: none; margin-left: 18px; font-size: 0.82rem; transition: color 0.3s; }
@@ -32,9 +32,9 @@
             background: radial-gradient(circle at 50% 20%, #1e1b4b 0%, #050507 70%);
         }
         .hero-img {
-            width: 170px; height: 170px; border-radius: 20px; object-fit: contain;
+            width: 100%; max-width: 260px; height: auto; border-radius: 16px;
             background-color: #121218; border: 3px solid #c084fc; margin-bottom: 20px;
-            box-shadow: 0 0 25px rgba(192, 132, 252, 0.3);
+            box-shadow: 0 0 25px rgba(192, 132, 252, 0.3); display: inline-block;
         }
         .hero-tag {
             display: inline-block; font-size: 0.8rem; text-transform: uppercase;
@@ -69,20 +69,20 @@
         .timeline-title { font-size: 1.2rem; font-weight: 600; color: #ffffff; margin-bottom: 8px; }
         .timeline-text { color: #a1a1a6; font-size: 0.92rem; }
 
-        /* Gallery Grid - Full Display */
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 16px; }
+        /* Gallery Grid - Natural Full Display */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 16px; align-items: start; }
         .gallery-img { 
             width: 100%; 
             height: auto; 
-            max-height: 350px; 
-            object-fit: contain; 
+            object-fit: initial; 
             background-color: #0d0d12;
             border-radius: 12px; 
             border: 1px solid rgba(255, 255, 255, 0.1); 
+            display: block;
         }
 
-        /* Products Grid - Full Display */
-        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        /* Products Grid - Natural Full Display */
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; align-items: start; }
         .product-card {
             background: #0d0d12; border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 16px; padding: 16px; text-align: center;
@@ -90,11 +90,11 @@
         .product-card img { 
             width: 100%; 
             height: auto; 
-            max-height: 220px; 
-            object-fit: contain; 
+            object-fit: initial; 
             background-color: #050507;
             border-radius: 12px; 
             margin-bottom: 12px; 
+            display: block;
         }
         .product-card h4 { font-size: 1rem; color: #ffffff; margin-bottom: 4px; }
 
@@ -110,7 +110,7 @@
         /* Video Grid */
         .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
         .video-box { background: #0d0d12; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 16px; text-align: center; }
-        .video-box video { width: 100%; border-radius: 12px; max-height: 380px; object-fit: contain; background-color: #000; }
+        .video-box video { width: 100%; height: auto; border-radius: 12px; background-color: #000; }
         .video-box p { color: #a1a1a6; font-size: 0.88rem; margin-top: 10px; }
 
         /* Fan Hub & Footer */
@@ -215,7 +215,7 @@
                 <p>Highlights of digital reach, community interaction, and fan culture.</p>
             </div>
 
-            <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+            <div class="gallery-grid">
                 <img src="SLP1.jpg" alt="Social Media Presence 1" class="gallery-img">
                 <img src="SLP2.jpg" alt="Social Media Presence 2" class="gallery-img">
                 <img src="SLP3.jpg" alt="Social Media Presence 3" class="gallery-img">
@@ -247,7 +247,7 @@
                 <div class="feature-card">
                     <h3>Royal Shield Family Ambassador</h3>
                     <div class="gallery-grid">
-                        <img src="RS.jpg" alt="Royal Shield Family" class="gallery-img" style="max-height: 380px;">
+                        <img src="RS.jpg" alt="Royal Shield Family" class="gallery-img">
                     </div>
                 </div>
             </div>
@@ -261,7 +261,7 @@
             </div>
 
             <!-- Photos -->
-            <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-bottom: 24px;">
+            <div class="gallery-grid" style="margin-bottom: 24px;">
                 <img src="PF1.jpg" alt="Public Speech 1" class="gallery-img">
                 <img src="PF2.jpg" alt="Public Speech 2" class="gallery-img">
                 <img src="PF3.jpg" alt="Public Speech 3" class="gallery-img">
