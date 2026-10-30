@@ -32,8 +32,8 @@
             background: radial-gradient(circle at 50% 20%, #1e1b4b 0%, #050507 70%);
         }
         .hero-img {
-            width: 170px; height: 170px; border-radius: 50%; object-fit: cover;
-            border: 3px solid #c084fc; margin-bottom: 20px;
+            width: 170px; height: 170px; border-radius: 20px; object-fit: contain;
+            background-color: #121218; border: 3px solid #c084fc; margin-bottom: 20px;
             box-shadow: 0 0 25px rgba(192, 132, 252, 0.3);
         }
         .hero-tag {
@@ -69,17 +69,33 @@
         .timeline-title { font-size: 1.2rem; font-weight: 600; color: #ffffff; margin-bottom: 8px; }
         .timeline-text { color: #a1a1a6; font-size: 0.92rem; }
 
-        /* Gallery Grid */
+        /* Gallery Grid - Full Display */
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 16px; }
-        .gallery-img { width: 100%; height: 220px; object-fit: cover; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gallery-img { 
+            width: 100%; 
+            height: auto; 
+            max-height: 350px; 
+            object-fit: contain; 
+            background-color: #0d0d12;
+            border-radius: 12px; 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+        }
 
-        /* Products Grid */
+        /* Products Grid - Full Display */
         .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
         .product-card {
             background: #0d0d12; border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 16px; padding: 16px; text-align: center;
         }
-        .product-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 12px; margin-bottom: 12px; }
+        .product-card img { 
+            width: 100%; 
+            height: auto; 
+            max-height: 220px; 
+            object-fit: contain; 
+            background-color: #050507;
+            border-radius: 12px; 
+            margin-bottom: 12px; 
+        }
         .product-card h4 { font-size: 1rem; color: #ffffff; margin-bottom: 4px; }
 
         /* Feature Cards */
@@ -94,7 +110,7 @@
         /* Video Grid */
         .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
         .video-box { background: #0d0d12; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 16px; text-align: center; }
-        .video-box video { width: 100%; border-radius: 12px; max-height: 380px; object-fit: cover; }
+        .video-box video { width: 100%; border-radius: 12px; max-height: 380px; object-fit: contain; background-color: #000; }
         .video-box p { color: #a1a1a6; font-size: 0.88rem; margin-top: 10px; }
 
         /* Fan Hub & Footer */
@@ -231,7 +247,7 @@
                 <div class="feature-card">
                     <h3>Royal Shield Family Ambassador</h3>
                     <div class="gallery-grid">
-                        <img src="RS.jpg" alt="Royal Shield Family" class="gallery-img" style="height: 280px;">
+                        <img src="RS.jpg" alt="Royal Shield Family" class="gallery-img" style="max-height: 380px;">
                     </div>
                 </div>
             </div>
@@ -246,10 +262,10 @@
 
             <!-- Photos -->
             <div class="gallery-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-bottom: 24px;">
-                <img src="PF1.jpg" alt="Public Speech 1" class="gallery-img" style="height: 240px;">
-                <img src="PF2.jpg" alt="Public Speech 2" class="gallery-img" style="height: 240px;">
-                <img src="PF3.jpg" alt="Public Speech 3" class="gallery-img" style="height: 240px;">
-                <img src="PF4.jpg" alt="Public Speech 4" class="gallery-img" style="height: 240px;">
+                <img src="PF1.jpg" alt="Public Speech 1" class="gallery-img">
+                <img src="PF2.jpg" alt="Public Speech 2" class="gallery-img">
+                <img src="PF3.jpg" alt="Public Speech 3" class="gallery-img">
+                <img src="PF4.jpg" alt="Public Speech 4" class="gallery-img">
             </div>
 
             <!-- Videos -->
